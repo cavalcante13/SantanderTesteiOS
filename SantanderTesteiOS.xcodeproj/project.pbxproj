@@ -52,6 +52,23 @@
 		F59F17032156951A00505A52 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F17022156951A00505A52 /* AppNavigationController.swift */; };
 		F59F17082156B6AF00505A52 /* HTTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F17072156B6AF00505A52 /* HTTRequest.swift */; };
 		F59F170B2156B7BF00505A52 /* HTTPRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F170A2156B7BF00505A52 /* HTTPRequestable.swift */; };
+		F5C024552158042C00A5991D /* SantanderButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C024542158042C00A5991D /* SantanderButtonView.swift */; };
+		F5C024582158044000A5991D /* SantanderButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C024572158044000A5991D /* SantanderButtonView.xib */; };
+		F5C0245A2158187800A5991D /* FundDownInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C024592158187800A5991D /* FundDownInfo.swift */; };
+		F5C0245D21581EDF00A5991D /* InvestmentDownInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0245B21581EDF00A5991D /* InvestmentDownInfoTableViewCell.swift */; };
+		F5C0245E21581EDF00A5991D /* InvestmentDownInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C0245C21581EDF00A5991D /* InvestmentDownInfoTableViewCell.xib */; };
+		F5C02460215821B900A5991D /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0245F215821B900A5991D /* AddContactViewController.swift */; };
+		F5C02463215821EA00A5991D /* AddContactInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C02462215821EA00A5991D /* AddContactInteractor.swift */; };
+		F5C0246521583A3000A5991D /* AddContactWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0246421583A3000A5991D /* AddContactWorker.swift */; };
+		F5C0246721583A3D00A5991D /* AddContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0246621583A3D00A5991D /* AddContactPresenter.swift */; };
+		F5C0246921583A4C00A5991D /* AddContactRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0246821583A4C00A5991D /* AddContactRouter.swift */; };
+		F5C0246B21583A5A00A5991D /* AddContactModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0246A21583A5A00A5991D /* AddContactModels.swift */; };
+		F5C0246F2158423D00A5991D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0246E2158423D00A5991D /* Cell.swift */; };
+		F5C02471215844B700A5991D /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C02470215844B700A5991D /* CellViewModel.swift */; };
+		F5C02473215847DD00A5991D /* AddContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C02472215847DD00A5991D /* AddContactCell.swift */; };
+		F5C02475215862E400A5991D /* AddContactFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C02474215862E400A5991D /* AddContactFieldView.swift */; };
+		F5C02478215862FF00A5991D /* AddContactFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C02477215862FF00A5991D /* AddContactFieldView.xib */; };
+		F5C0247A2158741700A5991D /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C024792158741700A5991D /* UITextFieldExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +140,23 @@
 		F59F17022156951A00505A52 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		F59F17072156B6AF00505A52 /* HTTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTRequest.swift; sourceTree = "<group>"; };
 		F59F170A2156B7BF00505A52 /* HTTPRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestable.swift; sourceTree = "<group>"; };
+		F5C024542158042C00A5991D /* SantanderButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantanderButtonView.swift; sourceTree = "<group>"; };
+		F5C024572158044000A5991D /* SantanderButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SantanderButtonView.xib; sourceTree = "<group>"; };
+		F5C024592158187800A5991D /* FundDownInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDownInfo.swift; sourceTree = "<group>"; };
+		F5C0245B21581EDF00A5991D /* InvestmentDownInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentDownInfoTableViewCell.swift; sourceTree = "<group>"; };
+		F5C0245C21581EDF00A5991D /* InvestmentDownInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvestmentDownInfoTableViewCell.xib; sourceTree = "<group>"; };
+		F5C0245F215821B900A5991D /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		F5C02462215821EA00A5991D /* AddContactInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactInteractor.swift; sourceTree = "<group>"; };
+		F5C0246421583A3000A5991D /* AddContactWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactWorker.swift; sourceTree = "<group>"; };
+		F5C0246621583A3D00A5991D /* AddContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactPresenter.swift; sourceTree = "<group>"; };
+		F5C0246821583A4C00A5991D /* AddContactRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactRouter.swift; sourceTree = "<group>"; };
+		F5C0246A21583A5A00A5991D /* AddContactModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactModels.swift; sourceTree = "<group>"; };
+		F5C0246E2158423D00A5991D /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		F5C02470215844B700A5991D /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		F5C02472215847DD00A5991D /* AddContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactCell.swift; sourceTree = "<group>"; };
+		F5C02474215862E400A5991D /* AddContactFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFieldView.swift; sourceTree = "<group>"; };
+		F5C02477215862FF00A5991D /* AddContactFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddContactFieldView.xib; sourceTree = "<group>"; };
+		F5C024792158741700A5991D /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +209,8 @@
 			children = (
 				F5044302215742A3009DBA7D /* InvestmentInfoTableViewCell.swift */,
 				F5044303215742A3009DBA7D /* InvestmentInfoTableViewCell.xib */,
+				F5C0245B21581EDF00A5991D /* InvestmentDownInfoTableViewCell.swift */,
+				F5C0245C21581EDF00A5991D /* InvestmentDownInfoTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -184,6 +220,7 @@
 			children = (
 				F50FD7EA215716AC0094E15C /* LayoutVerticalViewController */,
 				F50FD7E02156DD620094E15C /* SantanderLabel */,
+				F5C024562158043100A5991D /* SantanderButton */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +293,7 @@
 				F54787522156BC7A00A9DEB9 /* NSErrorExtension.swift */,
 				F50FD7E12156DD9A0094E15C /* UIViewExtension.swift */,
 				F50FD80A215735E10094E15C /* UITableViewExtension.swift */,
+				F5C024792158741700A5991D /* UITextFieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				F59F16F7215692CB00505A52 /* Investment */,
+				F5C02461215821CA00A5991D /* AddContact */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -360,6 +399,10 @@
 				F50FD7FE215731FD0094E15C /* ScreenMoreInfo.swift */,
 				F50FD8002157324F0094E15C /* Fund.swift */,
 				F5044307215744A2009DBA7D /* FundInfo.swift */,
+				F5C024592158187800A5991D /* FundDownInfo.swift */,
+				F5C02472215847DD00A5991D /* AddContactCell.swift */,
+				F5C0246E2158423D00A5991D /* Cell.swift */,
+				F5C02470215844B700A5991D /* CellViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,6 +416,38 @@
 				F54787502156B8FA00A9DEB9 /* HTTPEnvironment.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		F5C024562158043100A5991D /* SantanderButton */ = {
+			isa = PBXGroup;
+			children = (
+				F5C024542158042C00A5991D /* SantanderButtonView.swift */,
+				F5C024572158044000A5991D /* SantanderButtonView.xib */,
+			);
+			path = SantanderButton;
+			sourceTree = "<group>";
+		};
+		F5C02461215821CA00A5991D /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				F5C02476215862F000A5991D /* Views */,
+				F5C0245F215821B900A5991D /* AddContactViewController.swift */,
+				F5C02462215821EA00A5991D /* AddContactInteractor.swift */,
+				F5C0246421583A3000A5991D /* AddContactWorker.swift */,
+				F5C0246621583A3D00A5991D /* AddContactPresenter.swift */,
+				F5C0246821583A4C00A5991D /* AddContactRouter.swift */,
+				F5C0246A21583A5A00A5991D /* AddContactModels.swift */,
+			);
+			path = AddContact;
+			sourceTree = "<group>";
+		};
+		F5C02476215862F000A5991D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5C02474215862E400A5991D /* AddContactFieldView.swift */,
+				F5C02477215862FF00A5991D /* AddContactFieldView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +554,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C0245E21581EDF00A5991D /* InvestmentDownInfoTableViewCell.xib in Resources */,
 				F50FD80F215736110094E15C /* InvestmentFundMoreInfoTableViewCell.xib in Resources */,
 				F50FD7FC21571BAB0094E15C /* DINPro-Regular.otf in Resources */,
 				F50FD7F621571BAB0094E15C /* DINNeuzeitGroteskStd-BdCond.otf in Resources */,
@@ -487,6 +563,8 @@
 				F50FD7E42156DE3A0094E15C /* SantanderLabelView.xib in Resources */,
 				F504430121574213009DBA7D /* InvestmentInfoView.xib in Resources */,
 				F50FD7F421571BAB0094E15C /* DINEngschriftStd.otf in Resources */,
+				F5C024582158044000A5991D /* SantanderButtonView.xib in Resources */,
+				F5C02478215862FF00A5991D /* AddContactFieldView.xib in Resources */,
 				F50FD7F921571BAB0094E15C /* DINPro-Black.otf in Resources */,
 				F50FD7FB21571BAB0094E15C /* DINPro-Light.otf in Resources */,
 				F50FD7F721571BAB0094E15C /* DINPro-Bold.otf in Resources */,
@@ -524,26 +602,40 @@
 				F547875B2156C20500A9DEB9 /* ScreenModel.swift in Sources */,
 				F59F16FB2156933E00505A52 /* InvestmentWorker.swift in Sources */,
 				F50FD80B215735E10094E15C /* UITableViewExtension.swift in Sources */,
+				F5C02463215821EA00A5991D /* AddContactInteractor.swift in Sources */,
+				F5C02460215821B900A5991D /* AddContactViewController.swift in Sources */,
+				F5C0246521583A3000A5991D /* AddContactWorker.swift in Sources */,
 				F59F16FF2156935A00505A52 /* InvestmentRouter.swift in Sources */,
+				F5C0247A2158741700A5991D /* UITextFieldExtension.swift in Sources */,
 				F59F16C52156921100505A52 /* AppDelegate.swift in Sources */,
 				F59F16FD2156934D00505A52 /* InvestmentPresenter.swift in Sources */,
+				F5C0245D21581EDF00A5991D /* InvestmentDownInfoTableViewCell.swift in Sources */,
+				F5C02471215844B700A5991D /* CellViewModel.swift in Sources */,
 				F50FD8012157324F0094E15C /* Fund.swift in Sources */,
 				F59F170B2156B7BF00505A52 /* HTTPRequestable.swift in Sources */,
+				F5C0246B21583A5A00A5991D /* AddContactModels.swift in Sources */,
 				F50FD7DF2156DD3C0094E15C /* SantanderLabelView.swift in Sources */,
 				F59F16F92156930A00505A52 /* InvestmentInteractor.swift in Sources */,
 				F50FD807215734160094E15C /* InvestmentFundMoreInfoView.swift in Sources */,
+				F5C02475215862E400A5991D /* AddContactFieldView.swift in Sources */,
 				F50FD7E22156DD9A0094E15C /* UIViewExtension.swift in Sources */,
+				F5C0245A2158187800A5991D /* FundDownInfo.swift in Sources */,
 				F5044304215742A3009DBA7D /* InvestmentInfoTableViewCell.swift in Sources */,
 				F50FD7E9215706FC0094E15C /* LayoutVerticalViewController.swift in Sources */,
 				F547874F2156B88700A9DEB9 /* HTTPDomain.swift in Sources */,
 				F54787512156B8FA00A9DEB9 /* HTTPEnvironment.swift in Sources */,
+				F5C0246921583A4C00A5991D /* AddContactRouter.swift in Sources */,
 				F54787592156C1B000A9DEB9 /* Screen.swift in Sources */,
 				F59F17032156951A00505A52 /* AppNavigationController.swift in Sources */,
 				F50FD7FF215731FD0094E15C /* ScreenMoreInfo.swift in Sources */,
 				F54787632156CFEE00A9DEB9 /* LayoutAnimation.swift in Sources */,
 				F59F17012156936800505A52 /* InvestmentModels.swift in Sources */,
+				F5C024552158042C00A5991D /* SantanderButtonView.swift in Sources */,
+				F5C0246F2158423D00A5991D /* Cell.swift in Sources */,
 				F54787532156BC7B00A9DEB9 /* NSErrorExtension.swift in Sources */,
 				F50442FE215741F2009DBA7D /* InvestmentInfoView.swift in Sources */,
+				F5C02473215847DD00A5991D /* AddContactCell.swift in Sources */,
+				F5C0246721583A3D00A5991D /* AddContactPresenter.swift in Sources */,
 				F5044308215744A2009DBA7D /* FundInfo.swift in Sources */,
 				F59F16F5215692B700505A52 /* InvestmentViewController.swift in Sources */,
 			);

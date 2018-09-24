@@ -11,8 +11,8 @@ import UIKit
 
 class InvestmentInteractor  {
     
-    var presenter   : InvestmentPresenter?
-    private var worker      : InvestmentWorker?
+    var presenter : InvestmentPresenter?
+    private var worker : InvestmentWorker?
     
     init() {
         self.presenter  = InvestmentPresenter()

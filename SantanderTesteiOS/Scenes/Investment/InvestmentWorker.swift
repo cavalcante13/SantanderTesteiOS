@@ -11,23 +11,6 @@ import UIKit
 typealias InvestmentWorkerScreensHandler = (ScreenModel) -> Swift.Void
 typealias InvestmentWorkerScreenFailure  = (NSError)-> Swift.Void
 
-struct InvestmentWorkerRequestable : HTTPRequestable {
-    
-    var request : InvestmentModels.Screen.Request
-    
-    var url: URL {
-        return URL(string: environment.host + path)!
-    }
-    
-    var path: String {
-        return "fund.json"
-    }
-    
-    var params: [String : Any] {
-        return [:]
-    }
-}
-
 class InvestmentWorker {
     
     func fetchScreenInfo(completion : @escaping InvestmentWorkerScreensHandler, failure : @escaping InvestmentWorkerScreenFailure) {
@@ -42,5 +25,22 @@ class InvestmentWorker {
         }, failure: { error in
             failure(error)
         })
+    }
+}
+
+struct InvestmentWorkerRequestable : HTTPRequestable {
+    
+    var request : InvestmentModels.Screen.Request
+    
+    var url: URL {
+        return URL(string: environment.host + path)!
+    }
+    
+    var path: String {
+        return "fund.json"
+    }
+    
+    var params: [String : Any] {
+        return [:]
     }
 }

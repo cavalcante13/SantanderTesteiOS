@@ -43,12 +43,18 @@ extension LayoutVerticalViewProtocol {
 }
 
 class LayoutVerticalViewController: UIViewController, LayoutVerticalViewProtocol {
-    private var scrollView  : UIScrollView = UIScrollView()
-    private var stackView   : UIStackView  = UIStackView()
+    private var scrollView      : UIScrollView = UIScrollView()
+    private var stackView       : UIStackView  = UIStackView()
+    private var footerStackView : UIStackView  = UIStackView()
+    
     
     var spacing : CGFloat = 0
     
-    var edges   : UIEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    var contentInsets   : UIEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16) {
+        didSet{
+            self.updateViewConstraints()
+        }
+    }
     
     var showsVerticalIndicator : Bool = false {
         didSet { scrollView.showsVerticalScrollIndicator = showsVerticalIndicator }
@@ -59,7 +65,11 @@ class LayoutVerticalViewController: UIViewController, LayoutVerticalViewProtocol
     }
     
     var subviews : [UIView] {
-        fatalError("override this property, you need pass the subviews to start")
+        return []
+    }
+    
+    var footerViews : [UIView] {
+        return []
     }
     
     override func loadView() {
@@ -80,7 +90,15 @@ class LayoutVerticalViewController: UIViewController, LayoutVerticalViewProtocol
         stackView.distribution = .fill
         stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
+        footerStackView.translatesAutoresizingMaskIntoConstraints = false
+        footerStackView.alignment = .fill
+        footerStackView.axis      = .horizontal
+        footerStackView.spacing   = 1
+        footerStackView.distribution = .fillEqually
+        footerStackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
         view.addSubview(scrollView)
+        view.addSubview(footerStackView)
         scrollView.addSubview(stackView)
     }
     
@@ -89,6 +107,10 @@ class LayoutVerticalViewController: UIViewController, LayoutVerticalViewProtocol
         self.subviews.forEach {
             addHeight(view: $0)
             stackView.addArrangedSubview($0)
+        }
+        self.footerViews.forEach {
+            addHeight(view: $0)
+            footerStackView.addArrangedSubview($0)
         }
     }
     
@@ -101,10 +123,10 @@ class LayoutVerticalViewController: UIViewController, LayoutVerticalViewProtocol
     
     override func updateViewConstraints() {
         NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo:    view.leadingAnchor, constant : edges.left),
-            scrollView.trailingAnchor.constraint(equalTo:   view.trailingAnchor, constant : -edges.right),
-            scrollView.topAnchor.constraint(equalTo:        view.topAnchor, constant : edges.top),
-            scrollView.bottomAnchor.constraint(equalTo:     view.bottomAnchor, constant : -edges.bottom)
+            scrollView.leadingAnchor.constraint(equalTo:    view.leadingAnchor, constant : contentInsets.left),
+            scrollView.trailingAnchor.constraint(equalTo:   view.trailingAnchor, constant : -contentInsets.right),
+            scrollView.topAnchor.constraint(equalTo:        view.topAnchor, constant : contentInsets.top),
+            scrollView.bottomAnchor.constraint(equalTo:     footerStackView.topAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -114,6 +136,13 @@ class LayoutVerticalViewController: UIViewController, LayoutVerticalViewProtocol
             stackView.bottomAnchor.constraint(equalTo:  scrollView.bottomAnchor),
             stackView.widthAnchor.constraint(equalTo:   scrollView.widthAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            footerStackView.topAnchor.constraint(equalTo:      scrollView.bottomAnchor),
+            footerStackView.leadingAnchor.constraint(equalTo:  view.leadingAnchor),
+            footerStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            footerStackView.bottomAnchor.constraint(equalTo:   view.bottomAnchor)
+            ])
         
         super.updateViewConstraints()
     }
@@ -135,9 +164,6 @@ class LayoutVerticalViewController: UIViewController, LayoutVerticalViewProtocol
     }
     
     func insert(view: UIView, at: Int) {
-        guard stackView.arrangedSubviews.indices.contains(at) else {
-            return
-        }
         stackView.insertArrangedSubview(view, at: at)
         addHeight(view: view)
     }

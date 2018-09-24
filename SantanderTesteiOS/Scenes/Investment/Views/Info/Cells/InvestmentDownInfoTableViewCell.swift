@@ -1,5 +1,5 @@
 //
-//  InvestmentInfoTableViewCell.swift
+//  InvestmentDownInfoTableViewCell.swift
 //  SantanderTesteiOS
 //
 //  Created by Diego Costa on 23/09/18.
@@ -8,11 +8,9 @@
 
 import UIKit
 
-class InvestmentInfoTableViewCell: UITableViewCell {
-
+class InvestmentDownInfoTableViewCell: UITableViewCell {
     @IBOutlet private weak var nameLabel : UILabel!
-    @IBOutlet private weak var dataLabel : UILabel!
-
+    
     private var fundable : Fundable!
     
     
@@ -20,7 +18,7 @@ class InvestmentInfoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.selectionStyle = .none
     }
-
+    
     func set(fundable : Fundable) {
         self.fundable = fundable
         self.setupInterface()
@@ -28,6 +26,7 @@ class InvestmentInfoTableViewCell: UITableViewCell {
     
     private func setupInterface() {
         self.nameLabel.text = self.fundable.name
-        self.dataLabel.text = self.fundable.data
     }
+    
+    
 }

@@ -49,4 +49,8 @@ class SantanderLabelView: UIView {
     func set(textColor : UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)) {
         self.titleLabel.textColor = textColor
     }
+    
+    func set(alignment : NSTextAlignment) {
+        self.titleLabel.textAlignment = alignment
+    }
 }

@@ -18,6 +18,6 @@ class InvestmentPresenter: ScreenPresentation {
     
     func screenPresentation(response : InvestmentModels.Screen.Response) {
         let viewModel = InvestmentModels.Screen.ViewModel(screenModel: response.screenModel)
-        viewController?.displayScreen(viewModel: viewModel)
+        viewController?.showViewModel(viewModel: viewModel)
     }
 }

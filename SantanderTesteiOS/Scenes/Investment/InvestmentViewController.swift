@@ -9,7 +9,7 @@
 import UIKit
 
 protocol InvestmentDisplayScreen : class {
-    func displayScreen(viewModel : InvestmentModels.Screen.ViewModel)
+    func showViewModel(viewModel : InvestmentModels.Screen.ViewModel)
 }
 
 class InvestmentViewController: LayoutVerticalViewController, InvestmentDisplayScreen {
@@ -23,6 +23,10 @@ class InvestmentViewController: LayoutVerticalViewController, InvestmentDisplayS
     private var moreInfoView    : InvestmentFundMoreInfoView = InvestmentFundMoreInfoView()
     private var infoView        : InvestmentInfoView = InvestmentInfoView()
     
+    private var makeInvestmentAction    : SantanderButtonView = SantanderButtonView(title: "Investir",      mode: .enabled(#colorLiteral(red: 0.89276582, green: 0.1277235746, blue: 0, alpha: 1)))
+    private var investmentAction        : SantanderButtonView = SantanderButtonView(title: "Investimento",  mode: .enabled(#colorLiteral(red: 0.89276582, green: 0.1277235746, blue: 0, alpha: 1)))
+    private var contactAction           : SantanderButtonView = SantanderButtonView(title: "Contato",       mode: .enabled(#colorLiteral(red: 0.89276582, green: 0.1277235746, blue: 0, alpha: 1)))
+    
     private var line : UIView {
         return self.lineView(UIColor.groupTableViewBackground, 1)
     }
@@ -31,9 +35,13 @@ class InvestmentViewController: LayoutVerticalViewController, InvestmentDisplayS
     
     
     override var subviews: [UIView] {
-        return [titleView, fundView, line, whatIsView, definitionView, riskTitleView, infoTitleView, moreInfoView, line, infoView]
+        return [titleView, fundView, line, whatIsView, definitionView, riskTitleView, infoTitleView, moreInfoView, line, infoView, makeInvestmentAction]
     }
     
+    override var footerViews: [UIView] {
+        return [investmentAction, contactAction]
+    }
+
     init() {
         super.init(nibName: nil, bundle: nil)
         self.interactor = InvestmentInteractor()
@@ -47,13 +55,23 @@ class InvestmentViewController: LayoutVerticalViewController, InvestmentDisplayS
     override func viewDidLoad() {
         super.viewDidLoad()
         self.doLoadScreen()
+        self.setupInterface()
     }
     
     private func doLoadScreen() {
         self.interactor?.doLoadScreenInfo()
     }
     
-    func displayScreen(viewModel: InvestmentModels.Screen.ViewModel) {
+    private func setupInterface() {
+        makeInvestmentAction.contentEdges = UIEdgeInsets(top: 16, left: 24, bottom: 16, right: 24)
+        makeInvestmentAction.set(corner: 28)
+        
+        contactAction.action = { [weak self] in
+            self?.navigationController?.pushViewController(AddContactViewController(), animated: true)
+        }
+    }
+    
+    func showViewModel(viewModel: InvestmentModels.Screen.ViewModel) {
         titleView.set(text: viewModel.screenModel.screen.title)
         fundView.set(text: viewModel.screenModel.screen.fundName)
         whatIsView.set(text: viewModel.screenModel.screen.whatIs)
@@ -65,6 +83,6 @@ class InvestmentViewController: LayoutVerticalViewController, InvestmentDisplayS
         moreInfoView.set(fund: viewModel.screenModel.screen.moreInfo?.year)
         moreInfoView.set(fund: viewModel.screenModel.screen.moreInfo?.twelveMonths)
         
-        infoView.set(infos: viewModel.screenModel.screen.info)
+        infoView.set(allFunds: viewModel.screenModel.screen.allFunds)
     }
 }

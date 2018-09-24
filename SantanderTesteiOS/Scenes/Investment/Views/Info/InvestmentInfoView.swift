@@ -11,7 +11,7 @@ import UIKit
 class InvestmentInfoView: UIView {
     @IBOutlet private weak var tableView : UITableView!
     
-    private var infos : [FundInfo] = []
+    private var allFunds : [Fundable] = []
     
     
     init() {
@@ -39,10 +39,11 @@ class InvestmentInfoView: UIView {
         tableView.separatorStyle  = .none
         tableView.tableFooterView = UIView()
         tableView.register(class: InvestmentInfoTableViewCell.self)
+        tableView.register(class: InvestmentDownInfoTableViewCell.self)
     }
     
-    func set(infos : [FundInfo]) {
-        self.infos = infos
+    func set(allFunds : [Fundable]) {
+        self.allFunds = allFunds
         self.tableView.reloadData()
         
         self.layoutIfNeeded()
@@ -58,14 +59,19 @@ extension InvestmentInfoView : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return infos.count
+        return allFunds.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeue(cell: InvestmentInfoTableViewCell.self, indexPath: indexPath)
-        
-        cell.set(info: infos[indexPath.item])
-        
-        return cell
+        switch allFunds[indexPath.item] {
+        case is FundInfo:
+            let cell = tableView.dequeue(cell: InvestmentInfoTableViewCell.self, indexPath: indexPath)
+            cell.set(fundable: allFunds[indexPath.item])
+            return cell
+        default:
+            let cell = tableView.dequeue(cell: InvestmentDownInfoTableViewCell.self, indexPath: indexPath)
+            cell.set(fundable: allFunds[indexPath.item])
+            return cell
+        }   
     }
 }

@@ -8,10 +8,12 @@
 
 import Foundation
 
+protocol Fundable {
+    var name : String? { get set }
+    var data : String? { get set }
+}
 
-struct FundInfo : Codable {
-    
-    var name : String?
-    var data : String?
-    
+struct FundInfo : Codable, Fundable {
+    var name: String?
+    var data: String?
 }
