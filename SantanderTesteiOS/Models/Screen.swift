@@ -35,6 +35,8 @@ struct Screen : Codable {
         case downInfos  = "downInfo"
     }
     
+    init() {}
+    
     init(from decoder : Decoder)throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         title       = try? container.decode(String.self, forKey: .title)

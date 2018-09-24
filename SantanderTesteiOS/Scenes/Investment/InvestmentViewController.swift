@@ -31,8 +31,8 @@ class InvestmentViewController: LayoutVerticalViewController, InvestmentDisplayS
         return self.lineView(UIColor.groupTableViewBackground, 1)
     }
     
-    private var interactor : InvestmentInteractor?
-    
+    private var interactor  : InvestmentInteractor?
+    private var router      : InvestmentRouter?
     
     override var subviews: [UIView] {
         return [titleView, fundView, line, whatIsView, definitionView, riskTitleView, infoTitleView, moreInfoView, line, infoView, makeInvestmentAction]
@@ -45,7 +45,9 @@ class InvestmentViewController: LayoutVerticalViewController, InvestmentDisplayS
     init() {
         super.init(nibName: nil, bundle: nil)
         self.interactor = InvestmentInteractor()
+        self.router     = InvestmentRouter()
         self.interactor?.presenter?.viewController = self
+        self.router?.viewController = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -67,7 +69,7 @@ class InvestmentViewController: LayoutVerticalViewController, InvestmentDisplayS
         makeInvestmentAction.set(corner: 28)
         
         contactAction.action = { [weak self] in
-            self?.navigationController?.pushViewController(AddContactViewController(), animated: true)
+            self?.router?.routerToAddContact()
         }
     }
     

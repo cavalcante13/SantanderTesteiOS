@@ -41,7 +41,6 @@
 		F59F16C52156921100505A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F16C42156921100505A52 /* AppDelegate.swift */; };
 		F59F16CC2156921500505A52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F59F16CB2156921500505A52 /* Assets.xcassets */; };
 		F59F16CF2156921500505A52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59F16CD2156921500505A52 /* LaunchScreen.storyboard */; };
-		F59F16DA2156921500505A52 /* SantanderTesteiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F16D92156921500505A52 /* SantanderTesteiOSTests.swift */; };
 		F59F16E52156921500505A52 /* SantanderTesteiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F16E42156921500505A52 /* SantanderTesteiOSUITests.swift */; };
 		F59F16F5215692B700505A52 /* InvestmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F16F4215692B700505A52 /* InvestmentViewController.swift */; };
 		F59F16F92156930A00505A52 /* InvestmentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F16F82156930A00505A52 /* InvestmentInteractor.swift */; };
@@ -69,6 +68,8 @@
 		F5C02475215862E400A5991D /* AddContactFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C02474215862E400A5991D /* AddContactFieldView.swift */; };
 		F5C02478215862FF00A5991D /* AddContactFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C02477215862FF00A5991D /* AddContactFieldView.xib */; };
 		F5C0247A2158741700A5991D /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C024792158741700A5991D /* UITextFieldExtension.swift */; };
+		F5C0247E215886BE00A5991D /* InvestmentWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0247D215886BE00A5991D /* InvestmentWorkerTests.swift */; };
+		F5C0248121588FA300A5991D /* InvestmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0248021588FA300A5991D /* InvestmentPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +127,6 @@
 		F59F16CE2156921500505A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F59F16D02156921500505A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F59F16D52156921500505A52 /* SantanderTesteiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SantanderTesteiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F59F16D92156921500505A52 /* SantanderTesteiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantanderTesteiOSTests.swift; sourceTree = "<group>"; };
 		F59F16DB2156921500505A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F59F16E02156921500505A52 /* SantanderTesteiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SantanderTesteiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59F16E42156921500505A52 /* SantanderTesteiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantanderTesteiOSUITests.swift; sourceTree = "<group>"; };
@@ -157,6 +157,8 @@
 		F5C02474215862E400A5991D /* AddContactFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFieldView.swift; sourceTree = "<group>"; };
 		F5C02477215862FF00A5991D /* AddContactFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddContactFieldView.xib; sourceTree = "<group>"; };
 		F5C024792158741700A5991D /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		F5C0247D215886BE00A5991D /* InvestmentWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentWorkerTests.swift; sourceTree = "<group>"; };
+		F5C0248021588FA300A5991D /* InvestmentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,7 +335,7 @@
 		F59F16D82156921500505A52 /* SantanderTesteiOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				F59F16D92156921500505A52 /* SantanderTesteiOSTests.swift */,
+				F5C0247F215886C400A5991D /* Investment */,
 				F59F16DB2156921500505A52 /* Info.plist */,
 			);
 			path = SantanderTesteiOSTests;
@@ -448,6 +450,15 @@
 				F5C02477215862FF00A5991D /* AddContactFieldView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F5C0247F215886C400A5991D /* Investment */ = {
+			isa = PBXGroup;
+			children = (
+				F5C0247D215886BE00A5991D /* InvestmentWorkerTests.swift */,
+				F5C0248021588FA300A5991D /* InvestmentPresenter.swift */,
+			);
+			path = Investment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -645,7 +656,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F59F16DA2156921500505A52 /* SantanderTesteiOSTests.swift in Sources */,
+				F5C0247E215886BE00A5991D /* InvestmentWorkerTests.swift in Sources */,
+				F5C0248121588FA300A5991D /* InvestmentPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,6 +854,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RR9VAV7548;
 				INFOPLIST_FILE = SantanderTesteiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -862,6 +875,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RR9VAV7548;
 				INFOPLIST_FILE = SantanderTesteiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -881,6 +895,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RR9VAV7548;
 				INFOPLIST_FILE = SantanderTesteiOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -900,6 +915,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RR9VAV7548;
 				INFOPLIST_FILE = SantanderTesteiOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

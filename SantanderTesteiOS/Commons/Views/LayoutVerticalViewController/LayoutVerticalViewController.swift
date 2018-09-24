@@ -126,7 +126,6 @@ class LayoutVerticalViewController: UIViewController, LayoutVerticalViewProtocol
             scrollView.leadingAnchor.constraint(equalTo:    view.leadingAnchor, constant : contentInsets.left),
             scrollView.trailingAnchor.constraint(equalTo:   view.trailingAnchor, constant : -contentInsets.right),
             scrollView.topAnchor.constraint(equalTo:        view.topAnchor, constant : contentInsets.top),
-            scrollView.bottomAnchor.constraint(equalTo:     footerStackView.topAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -138,7 +137,7 @@ class LayoutVerticalViewController: UIViewController, LayoutVerticalViewProtocol
         ])
         
         NSLayoutConstraint.activate([
-            footerStackView.topAnchor.constraint(equalTo:      scrollView.bottomAnchor),
+            footerStackView.topAnchor.constraint(equalTo:      scrollView.bottomAnchor, constant : 16),
             footerStackView.leadingAnchor.constraint(equalTo:  view.leadingAnchor),
             footerStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             footerStackView.bottomAnchor.constraint(equalTo:   view.bottomAnchor)

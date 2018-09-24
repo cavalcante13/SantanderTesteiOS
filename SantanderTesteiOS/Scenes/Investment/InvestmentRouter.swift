@@ -8,6 +8,16 @@
 
 import UIKit
 
-class InvestmentRouter {
- 
+protocol InvestmentRouterLogic {
+    func routerToAddContact()
+}
+
+class InvestmentRouter : InvestmentRouterLogic {
+    
+    weak var viewController : InvestmentViewController?
+    
+    func routerToAddContact() {
+        self.viewController?.navigationController?.pushViewController(AddContactViewController(), animated: true)
+    }
+    
 }

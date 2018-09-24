@@ -34,11 +34,28 @@ class AddContactFieldView: UIView {
     
     func set(viewModel : CellViewModel) {
         self.viewModel = viewModel
+        self.prepareLayout()
     }
-    
+
     private func prepareLayout() {
         self.placeholderLabel.text  = viewModel.message
+        self.textField.delegate     = self
         self.textField.setLine()
+        
+        switch viewModel.typeField {
+        case .email:
+            self.textField.keyboardType = .emailAddress
+        case .telNumber:
+            self.textField.keyboardType = .numberPad
+        default:
+            self.textField.keyboardType = .default
+        }
     }
 }
 
+extension AddContactFieldView : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
+    }
+}

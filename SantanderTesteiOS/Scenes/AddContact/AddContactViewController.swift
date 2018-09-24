@@ -50,8 +50,8 @@ class AddContactViewController: LayoutVerticalViewController, AddContactDisplayC
                 textView.set(alignment: .left)
                 insert(view: textView, at: index)
             case .field:
-                let addContactView : AddContactFieldView = AddContactFieldView(viewModel: viewModel)
-                insert(view: addContactView, at: index)
+                let field : AddContactFieldView = AddContactFieldView(viewModel: viewModel)
+                insert(view: field, at: index)
             case .send:
                 let buttonView : SantanderButtonView = SantanderButtonView(title: viewModel.message, mode: .enabled(#colorLiteral(red: 0.89276582, green: 0.1277235746, blue: 0, alpha: 1)))
                 buttonView.set(corner: 24)
