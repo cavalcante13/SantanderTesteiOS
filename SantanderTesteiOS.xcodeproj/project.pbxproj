@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A46F66C215908300031F419 /* AddContactWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46F66B215908300031F419 /* AddContactWorkerTests.swift */; };
+		7A46F66F2159099F0031F419 /* AddContactPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46F66E2159099F0031F419 /* AddContactPresenterTests.swift */; };
 		F50442FE215741F2009DBA7D /* InvestmentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50442FD215741F2009DBA7D /* InvestmentInfoView.swift */; };
 		F504430121574213009DBA7D /* InvestmentInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F504430021574213009DBA7D /* InvestmentInfoView.xib */; };
 		F5044304215742A3009DBA7D /* InvestmentInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5044302215742A3009DBA7D /* InvestmentInfoTableViewCell.swift */; };
@@ -90,6 +92,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A46F66B215908300031F419 /* AddContactWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactWorkerTests.swift; sourceTree = "<group>"; };
+		7A46F66E2159099F0031F419 /* AddContactPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactPresenterTests.swift; sourceTree = "<group>"; };
 		F50442FD215741F2009DBA7D /* InvestmentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentInfoView.swift; sourceTree = "<group>"; };
 		F504430021574213009DBA7D /* InvestmentInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvestmentInfoView.xib; sourceTree = "<group>"; };
 		F5044302215742A3009DBA7D /* InvestmentInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -186,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A46F66D215908340031F419 /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				7A46F66B215908300031F419 /* AddContactWorkerTests.swift */,
+				7A46F66E2159099F0031F419 /* AddContactPresenterTests.swift */,
+			);
+			path = AddContact;
+			sourceTree = "<group>";
+		};
 		F50442FC215741B8009DBA7D /* MoreInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				F5C0247F215886C400A5991D /* Investment */,
+				7A46F66D215908340031F419 /* AddContact */,
 				F59F16DB2156921500505A52 /* Info.plist */,
 			);
 			path = SantanderTesteiOSTests;
@@ -657,7 +671,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C0247E215886BE00A5991D /* InvestmentWorkerTests.swift in Sources */,
+				7A46F66F2159099F0031F419 /* AddContactPresenterTests.swift in Sources */,
 				F5C0248121588FA300A5991D /* InvestmentPresenter.swift in Sources */,
+				7A46F66C215908300031F419 /* AddContactWorkerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,7 +42,7 @@ class InvestmentWorkerTests: XCTestCase {
         
         XCTAssertNotNil(allFunds, "AllFunds loaded")
         
-        XCTAssertNotNil(screen, "ScreenInfo not nil")
+        XCTAssertNotNil(screen, "ScreenInfo loaded")
         
         XCTAssertEqual(allFunds.count, screen.allFunds.count)
         
@@ -50,16 +50,12 @@ class InvestmentWorkerTests: XCTestCase {
     }
     
     func testScreenFailureRequest() {
-        var error : NSError!
-        
-        var screen : Screen!
         
         let investmentWorkerExpectation = expectation(description: "Wait for investment worker fetchScreenInfo() to return")
         
         self.worker.fetchScreenInfo(completion: { response in
             investmentWorkerExpectation.fulfill()
         }, failure: { fail in
-            error = fail
             
             XCTAssertNotNil(fail, "Ocorreu um erro")
             
@@ -67,7 +63,5 @@ class InvestmentWorkerTests: XCTestCase {
         })
         
         waitForExpectations(timeout: 2.0)
-        
-        XCTAssertNil(screen, "Screen not load by error")
     }
 }

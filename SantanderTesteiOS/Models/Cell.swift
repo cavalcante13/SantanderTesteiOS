@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Cell : Codable {
+struct Cell : Codable, Equatable {
     var id          : Int?
     var type        : Int?
     var message     : String?
@@ -17,4 +17,12 @@ struct Cell : Codable {
     var topSpacing  : Double?
     var show        : Int?
     var required    : Bool?
+    
+    
+    static func ==(lhs : Cell, rhs : Cell) -> Bool {
+        return lhs.id == rhs.id && lhs.type == rhs.type
+    }
+    static func <(lhs : Cell, rhs : Cell) -> Bool {
+        return lhs.id ?? 0 < rhs.id ?? 0 && lhs.type ?? 0 < rhs.type ?? 0
+    }
 }
